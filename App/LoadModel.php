@@ -291,6 +291,7 @@ class LoadModel extends BaseModel
      */
     private function loadFile(): ?array
     {
+        $separator = $this->getConfigParam(static::class . ':Separator');
         // Данные из файла
         $data = [];
         
@@ -300,7 +301,7 @@ class LoadModel extends BaseModel
                 break;
             }
             // Парсинг прочитанной строки
-            $values = explode(';', $buffer);
+            $values = explode($separator, $buffer);
             
             if (count($values) != 3) {
                 throw new \Exception(sprintf(ERROR_MODEL_FILE_ROW_READ, $this->getRowCount(), $this->getOriginalFileName()), 1003);

@@ -18,7 +18,7 @@ class Config extends BaseConfig
         
         'App\Controller:parallel_import' => 'App\AjaxView', // Вид для действия параллельного импорта
         
-        'App\Model:ImportTimeLimit' => 30,  // Время в сек, ожидания итерации импорта
+        'App\LoadModel:Separator' => ';',  // Разделитель csv-файла
          
         'App\CurlModel:PartFileSize' => 1000,   // Количество строк в частичном файле для импорта
         'App\CurlModel:CurlWaitTime' => 10,  // Частота опроса cURL-потоков в микросекундах
