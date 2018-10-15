@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+form {
+    text-align: center;
+}
+label {
+    display: block;
+}
+label span {
+    display: inline-block;
+    min-width: 100px;
+    text-align: left;
+}
+.error {
+    border: 1px solid red;
+}
+.progress {
+    border: 1px solid #ccc;
+    background-color: #ccc;
+}
+.success {
+    border: 1px solid green;
+}
